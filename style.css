@@ -2,11 +2,9 @@ img{
      width: 100%; 
       height: 100%;
 } 
- .container{ 
-     height: 400px; 
-     margin-bottom: 5px;
- }
-  .container2{ 
+ 
+ 
+  .container{ 
      display: flex; 
       height: 400px; 
        gap: 5px; 
@@ -14,23 +12,38 @@ img{
   
        
   } 
-   .container2>div{ 
+   .container>div{ 
      flex:1;
    } 
     .two-img{ 
          height: calc( (100% - 5px)/2);
     } 
-      .container3{ 
-         display: flex; 
-          height: 400px; 
-           gap: 5px; 
+     
           
-      } 
-       .container3>div{
-           flex:1;
-       } 
+       
+       
         .four-img{ 
              display: grid; 
               grid-template-columns: repeat(2,1fr); 
                gap: 5px;
-        }
+        } 
+
+
+         /* some media quary use */ 
+          @media screen and (max-width:500px) {
+              .container{ 
+                flex-direction: column; 
+                 height: auto;
+                 
+              }
+               .four-img{ 
+                     grid-template-columns: 1fr;
+               } 
+          
+          } 
+           @media screen and  (min-width:500px) and ( max-width:800px) {
+               .container{ 
+                    flex-direction: column; 
+                     height: auto;
+                  } 
+           }
